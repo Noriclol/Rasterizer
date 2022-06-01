@@ -1,0 +1,12 @@
+digraph "Matrix4::RotationVector"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Matrix4::RotationVector",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Rotate Matrix4 around Vector3 Pivot"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Vector3::normalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_vector3.html#ae8096af624673eb7ca99bbb89e2404fc",tooltip="Function to normalize Vector3."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Vector3::length",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_vector3.html#a564effdf0283cee5eb8ecaa25bef3302",tooltip="Function to determine length o vector3."];
+}

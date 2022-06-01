@@ -1,0 +1,405 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5,
+						8
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "exts",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"jsonFile" : "directory-exts-Debug-47c3398cee991796348b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "exts",
+					"targetIndexes" : 
+					[
+						7,
+						8
+					]
+				},
+				{
+					"build" : "exts/glew",
+					"jsonFile" : "directory-exts.glew-Debug-02f4fd1e2faeb071f0c6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "exts/glew",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "exts/glfw",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-exts.glfw-Debug-900a36c47712aa177352.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "exts/glfw"
+				},
+				{
+					"build" : "exts/glfw/src",
+					"jsonFile" : "directory-exts.glfw.src-Debug-eaba0fb8309f44642ec6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "exts/glfw/src",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "engine",
+					"childIndexes" : 
+					[
+						6,
+						7
+					],
+					"jsonFile" : "directory-engine-Debug-776e2b00c6520ab49d05.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "engine"
+				},
+				{
+					"build" : "engine/core",
+					"jsonFile" : "directory-engine.core-Debug-ff96e0131c02da5ed3c5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "engine/core",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "engine/render",
+					"jsonFile" : "directory-engine.render-Debug-43ace2bbcfa106f170ab.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "engine/render",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "projects",
+					"childIndexes" : 
+					[
+						9,
+						10,
+						11,
+						12
+					],
+					"jsonFile" : "directory-projects-Debug-e37290e84ffc757481da.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "projects"
+				},
+				{
+					"build" : "projects/Application",
+					"jsonFile" : "directory-projects.Application-Debug-9d57031772542ca32bb0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 3,
+					"source" : "projects/Application",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "projects/GFXlibrary",
+					"jsonFile" : "directory-projects.GFXlibrary-Debug-b3cb94019c2d72d7a333.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 4,
+					"source" : "projects/GFXlibrary",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "projects/Inputlibrary",
+					"jsonFile" : "directory-projects.Inputlibrary-Debug-4fcac93a3e8cb570fa78.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 5,
+					"source" : "projects/Inputlibrary",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "projects/Mathlibrary",
+					"jsonFile" : "directory-projects.Mathlibrary-Debug-fa2ddaafa64c11a49948.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 6,
+					"source" : "projects/Mathlibrary",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						5,
+						6,
+						7,
+						8
+					],
+					"name" : "gscept_lab_env",
+					"targetIndexes" : 
+					[
+						4,
+						7,
+						8,
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "glew",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3,
+						4
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "Application",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						10
+					],
+					"name" : "GFXlibrary",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						11
+					],
+					"name" : "Inputlibrary",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						12
+					],
+					"name" : "Mathlibrary",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 9,
+					"id" : "Application::@1e804a239ee89d6d5dce",
+					"jsonFile" : "target-Application-Debug-983ab9c3b701f10ed2ef.json",
+					"name" : "Application",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "GFXlibrary::@dedc86eb7b61cb397321",
+					"jsonFile" : "target-GFXlibrary-Debug-1d86cc81719215878081.json",
+					"name" : "GFXlibrary",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "Inputlibrary::@b20d1fb9d216d6f6e2ef",
+					"jsonFile" : "target-Inputlibrary-Debug-a61ad06818b592867a4d.json",
+					"name" : "Inputlibrary",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "Mathlibrary::@d485fc4ae85fd36f494d",
+					"jsonFile" : "target-Mathlibrary-Debug-8479e1e254713a44f39d.json",
+					"name" : "Mathlibrary",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "core::@daec77c92998606c5111",
+					"jsonFile" : "target-core-Debug-971a2f1e7d580a123f68.json",
+					"name" : "core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "glew::@710e69b0c5555f599eaa",
+					"jsonFile" : "target-glew-Debug-0312df16bcbf98adba4c.json",
+					"name" : "glew",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "glfw::@766e2fc5a7847ac43afc",
+					"jsonFile" : "target-glfw-Debug-42d3ebc481ac92b59c6a.json",
+					"name" : "glfw",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "imgui::@91fdfbc389eb79cc7eac",
+					"jsonFile" : "target-imgui-Debug-c525b3f331734d9ef1fe.json",
+					"name" : "imgui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "nanovg::@91fdfbc389eb79cc7eac",
+					"jsonFile" : "target-nanovg-Debug-b3bfa9f6beee3c73f840.json",
+					"name" : "nanovg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "render::@d03e0f9399c2d8dcbd5e",
+					"jsonFile" : "target-render-Debug-7dc27c2039592f05f8b9.json",
+					"name" : "render",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Programmering/Git Repositories/rasterizer-Noriclol/out/build/x64-Debug",
+		"source" : "D:/Programmering/Git Repositories/rasterizer-Noriclol"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

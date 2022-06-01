@@ -1,0 +1,164 @@
+\hypertarget{class_mesh_resource}{}\doxysection{Mesh\+Resource Class Reference}
+\label{class_mesh_resource}\index{MeshResource@{MeshResource}}
+
+
+{\ttfamily \#include $<$Mesh\+Resource.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_mesh_resource_a608ea78fcef24e93a107e392af74f033}{Bind\+Buffers}} (unsigned int \&vertex\+Buffer, unsigned int \&index\+Buffer)
+\begin{DoxyCompactList}\small\item\em binds the buffers using the handles in the main function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_resource_aea6873fa44f07fc5a19dae20871f286e}{Bind\+Vertex\+Attribute}} ()
+\begin{DoxyCompactList}\small\item\em depending on the stride and attributes enabled it selects the enabled attributes and gives them the space so they will get read into the array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_resource_af98a4d8103e43822277359a67ddfe6b1}{Unbind\+Buffers}} ()
+\begin{DoxyCompactList}\small\item\em unbind the buffers previously binded in the \mbox{\hyperlink{class_mesh_resource_a608ea78fcef24e93a107e392af74f033}{Bind\+Buffers()}} function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_resource_aa701914e672254e69fc62b03c8271f5f}{Vertex\+Compile}} ()
+\begin{DoxyCompactList}\small\item\em compiles the Vertex\+Attributes into the v\+Buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_resource_a51a19fee6d2803baacb12a684a14ea54}{Load\+O\+BJ}} ()
+\begin{DoxyCompactList}\small\item\em for Importing a O\+BJ file(not complete) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_resource_ad1d1e39e5e2e0b4ca6adf50f807b152d}{Load\+F\+BX}} ()
+\begin{DoxyCompactList}\small\item\em for Importing a F\+BX file(not complete) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mesh_resource_a70eacc4060b12acd2bc3db7326530340}{Transform}} (Matrix4 \&transform\+Matrix)
+\begin{DoxyCompactList}\small\item\em Transforms the Mesh along a matrix input \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_mesh_resource_affe26f751a713a6f5a330639d0aa56e7}{i\+Buffer\+Length}} ()
+\begin{DoxyCompactList}\small\item\em getter for ibuffer.\+size() \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_mesh_resource_a822dcf9cbaab17af62b09819dedecf51}{v\+Buffer\+Length}} ()
+\begin{DoxyCompactList}\small\item\em getter for vbuffer.\+size() \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mesh_resource_a43559bab7a001757b2de105c62517883}{Mesh\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em default\+Constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mesh_resource_a5b0f7eebefd9c1cc8282d08e4844899c}{$\sim$\+Mesh\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em default Destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mesh_resource_a43559bab7a001757b2de105c62517883}\label{class_mesh_resource_a43559bab7a001757b2de105c62517883}} 
+\index{MeshResource@{MeshResource}!MeshResource@{MeshResource}}
+\index{MeshResource@{MeshResource}!MeshResource@{MeshResource}}
+\doxysubsubsection{\texorpdfstring{MeshResource()}{MeshResource()}}
+{\footnotesize\ttfamily Mesh\+Resource\+::\+Mesh\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+default\+Constructor 
+
+\mbox{\Hypertarget{class_mesh_resource_a5b0f7eebefd9c1cc8282d08e4844899c}\label{class_mesh_resource_a5b0f7eebefd9c1cc8282d08e4844899c}} 
+\index{MeshResource@{MeshResource}!````~MeshResource@{$\sim$MeshResource}}
+\index{````~MeshResource@{$\sim$MeshResource}!MeshResource@{MeshResource}}
+\doxysubsubsection{\texorpdfstring{$\sim$MeshResource()}{~MeshResource()}}
+{\footnotesize\ttfamily Mesh\+Resource\+::$\sim$\+Mesh\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+default Destructor 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mesh_resource_a608ea78fcef24e93a107e392af74f033}\label{class_mesh_resource_a608ea78fcef24e93a107e392af74f033}} 
+\index{MeshResource@{MeshResource}!BindBuffers@{BindBuffers}}
+\index{BindBuffers@{BindBuffers}!MeshResource@{MeshResource}}
+\doxysubsubsection{\texorpdfstring{BindBuffers()}{BindBuffers()}}
+{\footnotesize\ttfamily void Mesh\+Resource\+::\+Bind\+Buffers (\begin{DoxyParamCaption}\item[{unsigned int \&}]{vertex\+Buffer,  }\item[{unsigned int \&}]{index\+Buffer }\end{DoxyParamCaption})}
+
+
+
+binds the buffers using the handles in the main function 
+
+\mbox{\Hypertarget{class_mesh_resource_aea6873fa44f07fc5a19dae20871f286e}\label{class_mesh_resource_aea6873fa44f07fc5a19dae20871f286e}} 
+\index{MeshResource@{MeshResource}!BindVertexAttribute@{BindVertexAttribute}}
+\index{BindVertexAttribute@{BindVertexAttribute}!MeshResource@{MeshResource}}
+\doxysubsubsection{\texorpdfstring{BindVertexAttribute()}{BindVertexAttribute()}}
+{\footnotesize\ttfamily void Mesh\+Resource\+::\+Bind\+Vertex\+Attribute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+depending on the stride and attributes enabled it selects the enabled attributes and gives them the space so they will get read into the array. 
+
+\mbox{\Hypertarget{class_mesh_resource_affe26f751a713a6f5a330639d0aa56e7}\label{class_mesh_resource_affe26f751a713a6f5a330639d0aa56e7}} 
+\index{MeshResource@{MeshResource}!iBufferLength@{iBufferLength}}
+\index{iBufferLength@{iBufferLength}!MeshResource@{MeshResource}}
+\doxysubsubsection{\texorpdfstring{iBufferLength()}{iBufferLength()}}
+{\footnotesize\ttfamily unsigned int Mesh\+Resource\+::i\+Buffer\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for ibuffer.\+size() 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mesh_resource_ad1d1e39e5e2e0b4ca6adf50f807b152d}\label{class_mesh_resource_ad1d1e39e5e2e0b4ca6adf50f807b152d}} 
+\index{MeshResource@{MeshResource}!LoadFBX@{LoadFBX}}
+\index{LoadFBX@{LoadFBX}!MeshResource@{MeshResource}}
+\doxysubsubsection{\texorpdfstring{LoadFBX()}{LoadFBX()}}
+{\footnotesize\ttfamily void Mesh\+Resource\+::\+Load\+F\+BX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+for Importing a F\+BX file(not complete) 
+
+\mbox{\Hypertarget{class_mesh_resource_a51a19fee6d2803baacb12a684a14ea54}\label{class_mesh_resource_a51a19fee6d2803baacb12a684a14ea54}} 
+\index{MeshResource@{MeshResource}!LoadOBJ@{LoadOBJ}}
+\index{LoadOBJ@{LoadOBJ}!MeshResource@{MeshResource}}
+\doxysubsubsection{\texorpdfstring{LoadOBJ()}{LoadOBJ()}}
+{\footnotesize\ttfamily void Mesh\+Resource\+::\+Load\+O\+BJ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+for Importing a O\+BJ file(not complete) 
+
+\mbox{\Hypertarget{class_mesh_resource_a70eacc4060b12acd2bc3db7326530340}\label{class_mesh_resource_a70eacc4060b12acd2bc3db7326530340}} 
+\index{MeshResource@{MeshResource}!Transform@{Transform}}
+\index{Transform@{Transform}!MeshResource@{MeshResource}}
+\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}}
+{\footnotesize\ttfamily void Mesh\+Resource\+::\+Transform (\begin{DoxyParamCaption}\item[{Matrix4 \&}]{matrix }\end{DoxyParamCaption})}
+
+
+
+Transforms the Mesh along a matrix input 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mesh_resource_af98a4d8103e43822277359a67ddfe6b1}\label{class_mesh_resource_af98a4d8103e43822277359a67ddfe6b1}} 
+\index{MeshResource@{MeshResource}!UnbindBuffers@{UnbindBuffers}}
+\index{UnbindBuffers@{UnbindBuffers}!MeshResource@{MeshResource}}
+\doxysubsubsection{\texorpdfstring{UnbindBuffers()}{UnbindBuffers()}}
+{\footnotesize\ttfamily void Mesh\+Resource\+::\+Unbind\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+unbind the buffers previously binded in the \mbox{\hyperlink{class_mesh_resource_a608ea78fcef24e93a107e392af74f033}{Bind\+Buffers()}} function 
+
+\mbox{\Hypertarget{class_mesh_resource_a822dcf9cbaab17af62b09819dedecf51}\label{class_mesh_resource_a822dcf9cbaab17af62b09819dedecf51}} 
+\index{MeshResource@{MeshResource}!vBufferLength@{vBufferLength}}
+\index{vBufferLength@{vBufferLength}!MeshResource@{MeshResource}}
+\doxysubsubsection{\texorpdfstring{vBufferLength()}{vBufferLength()}}
+{\footnotesize\ttfamily float Mesh\+Resource\+::v\+Buffer\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter for vbuffer.\+size() 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mesh_resource_aa701914e672254e69fc62b03c8271f5f}\label{class_mesh_resource_aa701914e672254e69fc62b03c8271f5f}} 
+\index{MeshResource@{MeshResource}!VertexCompile@{VertexCompile}}
+\index{VertexCompile@{VertexCompile}!MeshResource@{MeshResource}}
+\doxysubsubsection{\texorpdfstring{VertexCompile()}{VertexCompile()}}
+{\footnotesize\ttfamily void Mesh\+Resource\+::\+Vertex\+Compile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+compiles the Vertex\+Attributes into the v\+Buffer. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+projects/\+G\+F\+Xlibrary/code/\mbox{\hyperlink{_mesh_resource_8h}{Mesh\+Resource.\+h}}\item 
+projects/\+G\+F\+Xlibrary/code/\mbox{\hyperlink{_mesh_resource_8cc}{Mesh\+Resource.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,220 @@
+\hypertarget{class_vector3}{}\doxysection{Vector3 Class Reference}
+\label{class_vector3}\index{Vector3@{Vector3}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const float \& \mbox{\hyperlink{class_vector3_acac707ba6eece7031a09c8b6e1d43ac7}{operator\mbox{[}$\,$\mbox{]}}} (int i) const
+\begin{DoxyCompactList}\small\item\em Array operator overload. with the intent of enabling access to the x,y, z, w variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vector3_a065035dcc77c44e4fc546c438611e544}\label{class_vector3_a065035dcc77c44e4fc546c438611e544}} 
+float \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (int i)
+\item 
+\mbox{\Hypertarget{class_vector3_ac6aae9ef2836b00b39f04d5e8cfec996}\label{class_vector3_ac6aae9ef2836b00b39f04d5e8cfec996}} 
+\mbox{\hyperlink{class_vector3}{Vector3}} {\bfseries operator+} (const \mbox{\hyperlink{class_vector3}{Vector3}} \&other)
+\item 
+\mbox{\Hypertarget{class_vector3_a3c97ca1aaedd26faa7be1314938eb7cc}\label{class_vector3_a3c97ca1aaedd26faa7be1314938eb7cc}} 
+\mbox{\hyperlink{class_vector3}{Vector3}} {\bfseries operator-\/} (const \mbox{\hyperlink{class_vector3}{Vector3}} \&other)
+\item 
+float \mbox{\hyperlink{class_vector3_a8416185c1c6c146d5785f423a6fdac79}{Dot\+Product}} (const \mbox{\hyperlink{class_vector3}{Vector3}} \&other)
+\begin{DoxyCompactList}\small\item\em Calculates dot product between 2 \mbox{\hyperlink{class_vector3}{Vector3}} returning a float. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3}{Vector3}} \mbox{\hyperlink{class_vector3_a38c24d4aa23a9c74402411b1cbb256de}{Cross\+Product}} (const \mbox{\hyperlink{class_vector3}{Vector3}} \&other)
+\begin{DoxyCompactList}\small\item\em Calculates cross product. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3}{Vector3}} \mbox{\hyperlink{class_vector3_a3ff0140aa3505a55ca8c34ddec68d13c}{operator$\ast$}} (const float scalar)
+\begin{DoxyCompactList}\small\item\em multiplies \mbox{\hyperlink{class_vector3}{Vector3}} by scalar(float). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3}{Vector3}} \& \mbox{\hyperlink{class_vector3_a54db6fdf59dedaf91350694988dc916d}{operator=}} (const \mbox{\hyperlink{class_vector3}{Vector3}} \&other)
+\begin{DoxyCompactList}\small\item\em Sets the values of one vector to those of another. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vector3_a902af22ed6ade987e299ce529fa545e6}\label{class_vector3_a902af22ed6ade987e299ce529fa545e6}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{class_vector3}{Vector3}} \&other) const
+\item 
+\mbox{\Hypertarget{class_vector3_a25050a8c4f6ddcf8dffa3a514aa78f7e}\label{class_vector3_a25050a8c4f6ddcf8dffa3a514aa78f7e}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{class_vector3}{Vector3}} \&other) const
+\item 
+float \mbox{\hyperlink{class_vector3_a564effdf0283cee5eb8ecaa25bef3302}{length}} ()
+\begin{DoxyCompactList}\small\item\em Function to determine length o vector3. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3}{Vector3}} \mbox{\hyperlink{class_vector3_ae8096af624673eb7ca99bbb89e2404fc}{normalize}} ()
+\begin{DoxyCompactList}\small\item\em Function to normalize \mbox{\hyperlink{class_vector3}{Vector3}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_a0f49191f7e001e7f7ae1cb49522118b4}{Vector3}} ()
+\begin{DoxyCompactList}\small\item\em empty \mbox{\hyperlink{class_vector3}{Vector3}} Constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_aad6b7d343e46f9d930139ebf3195a886}{Vector3}} (const \mbox{\hyperlink{class_vector3}{Vector3}} \&other)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_vector3}{Vector3}} Copy Constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3_ad53e22b52babdb90d423601f72467590}{Vector3}} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Custom Vector Constructor taking 3 floats corresponding to the X, Y and Z values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_vector3_a7e2d3237b29a2f29d7b3d8b2934e35f2}\label{class_vector3_a7e2d3237b29a2f29d7b3d8b2934e35f2}} 
+float {\bfseries x}
+\item 
+\mbox{\Hypertarget{class_vector3_a86eb35a9fa2d5a49e7fad66a35fa9c13}\label{class_vector3_a86eb35a9fa2d5a49e7fad66a35fa9c13}} 
+float {\bfseries y}
+\item 
+\mbox{\Hypertarget{class_vector3_aa8c9461eb24bd2c364258078811a3e9d}\label{class_vector3_aa8c9461eb24bd2c364258078811a3e9d}} 
+float {\bfseries z}
+\item 
+\mbox{\Hypertarget{class_vector3_a3727fdc95de6570ebf7b70791326f4da}\label{class_vector3_a3727fdc95de6570ebf7b70791326f4da}} 
+float {\bfseries w}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_vector3_aed2829d86d2df8f9333d4c0087455880}\label{class_vector3_aed2829d86d2df8f9333d4c0087455880}} 
+class {\bfseries Matrix4}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_vector3_a0f49191f7e001e7f7ae1cb49522118b4}\label{class_vector3_a0f49191f7e001e7f7ae1cb49522118b4}} 
+\index{Vector3@{Vector3}!Vector3@{Vector3}}
+\index{Vector3@{Vector3}!Vector3@{Vector3}}
+\doxysubsubsection{\texorpdfstring{Vector3()}{Vector3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Vector3\+::\+Vector3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+empty \mbox{\hyperlink{class_vector3}{Vector3}} Constructor 
+
+\mbox{\Hypertarget{class_vector3_aad6b7d343e46f9d930139ebf3195a886}\label{class_vector3_aad6b7d343e46f9d930139ebf3195a886}} 
+\index{Vector3@{Vector3}!Vector3@{Vector3}}
+\index{Vector3@{Vector3}!Vector3@{Vector3}}
+\doxysubsubsection{\texorpdfstring{Vector3()}{Vector3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Vector3\+::\+Vector3 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector3}{Vector3}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_vector3}{Vector3}} Copy Constructor 
+
+\mbox{\Hypertarget{class_vector3_ad53e22b52babdb90d423601f72467590}\label{class_vector3_ad53e22b52babdb90d423601f72467590}} 
+\index{Vector3@{Vector3}!Vector3@{Vector3}}
+\index{Vector3@{Vector3}!Vector3@{Vector3}}
+\doxysubsubsection{\texorpdfstring{Vector3()}{Vector3()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Vector3\+::\+Vector3 (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Custom Vector Constructor taking 3 floats corresponding to the X, Y and Z values. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vector3_a38c24d4aa23a9c74402411b1cbb256de}\label{class_vector3_a38c24d4aa23a9c74402411b1cbb256de}} 
+\index{Vector3@{Vector3}!CrossProduct@{CrossProduct}}
+\index{CrossProduct@{CrossProduct}!Vector3@{Vector3}}
+\doxysubsubsection{\texorpdfstring{CrossProduct()}{CrossProduct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3}{Vector3}} Vector3\+::\+Cross\+Product (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector3}{Vector3}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates cross product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other \mbox{\hyperlink{class_vector3}{Vector3}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vector3}{Vector3}}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector3_a8416185c1c6c146d5785f423a6fdac79}\label{class_vector3_a8416185c1c6c146d5785f423a6fdac79}} 
+\index{Vector3@{Vector3}!DotProduct@{DotProduct}}
+\index{DotProduct@{DotProduct}!Vector3@{Vector3}}
+\doxysubsubsection{\texorpdfstring{DotProduct()}{DotProduct()}}
+{\footnotesize\ttfamily float Vector3\+::\+Dot\+Product (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector3}{Vector3}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates dot product between 2 \mbox{\hyperlink{class_vector3}{Vector3}} returning a float. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other vector3\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector3_a564effdf0283cee5eb8ecaa25bef3302}\label{class_vector3_a564effdf0283cee5eb8ecaa25bef3302}} 
+\index{Vector3@{Vector3}!length@{length}}
+\index{length@{length}!Vector3@{Vector3}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily float Vector3\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to determine length o vector3. 
+
+\begin{DoxyReturn}{Returns}
+float
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector3_ae8096af624673eb7ca99bbb89e2404fc}\label{class_vector3_ae8096af624673eb7ca99bbb89e2404fc}} 
+\index{Vector3@{Vector3}!normalize@{normalize}}
+\index{normalize@{normalize}!Vector3@{Vector3}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3}{Vector3}} Vector3\+::normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to normalize \mbox{\hyperlink{class_vector3}{Vector3}}. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vector3}{Vector3}}
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{class_vector3_a3ff0140aa3505a55ca8c34ddec68d13c}\label{class_vector3_a3ff0140aa3505a55ca8c34ddec68d13c}} 
+\index{Vector3@{Vector3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vector3@{Vector3}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3}{Vector3}} Vector3\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const float}]{scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+multiplies \mbox{\hyperlink{class_vector3}{Vector3}} by scalar(float). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & scalar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vector3}{Vector3}}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector3_a54db6fdf59dedaf91350694988dc916d}\label{class_vector3_a54db6fdf59dedaf91350694988dc916d}} 
+\index{Vector3@{Vector3}!operator=@{operator=}}
+\index{operator=@{operator=}!Vector3@{Vector3}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3}{Vector3}}\& Vector3\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector3}{Vector3}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the values of one vector to those of another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector3_acac707ba6eece7031a09c8b6e1d43ac7}\label{class_vector3_acac707ba6eece7031a09c8b6e1d43ac7}} 
+\index{Vector3@{Vector3}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Vector3@{Vector3}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily const float\& Vector3\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Array operator overload. with the intent of enabling access to the x,y, z, w variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+x,y,z or w
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+code/Vector3.\+h\end{DoxyCompactItemize}

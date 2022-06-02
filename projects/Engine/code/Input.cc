@@ -151,7 +151,7 @@ void InputListener::KeyActionList()
 
 	//WASD
 	
-	float speed = 0.05f;
+	float speed = CameraSpeed;
 
 	//W
 	if (keyButtonActiveArr[0] == 1)
@@ -160,7 +160,7 @@ void InputListener::KeyActionList()
 		for (i; i < ctrlArr.size(); i++)
 		{
 			if (ctrlArr[i] == nullptr)
-				return;
+				continue;
 
 			ctrlArr[i]->Move(Vector3(Vector3::forward) * speed);
 
@@ -176,7 +176,7 @@ void InputListener::KeyActionList()
 		for (i; i < ctrlArr.size(); i++)
 		{
 			if (ctrlArr[i] == nullptr)
-				return;
+				continue;
 
 			ctrlArr[i]->Move(Vector3(Vector3::right) * speed);
 
@@ -192,7 +192,7 @@ void InputListener::KeyActionList()
 		for (i; i < ctrlArr.size(); i++)
 		{
 			if (ctrlArr[i] == nullptr)
-				return;
+				continue;
 
 			ctrlArr[i]->Move(Vector3(Vector3::forward) * -speed);
 
@@ -208,7 +208,7 @@ void InputListener::KeyActionList()
 		for (i; i < ctrlArr.size(); i++)
 		{
 			if (ctrlArr[i] == nullptr)
-				return;
+				continue;
 
 			ctrlArr[i]->Move(Vector3(Vector3::right) * -speed);
 
@@ -225,7 +225,7 @@ void InputListener::KeyActionList()
 		for (i; i < ctrlArr.size(); i++)
 		{
 			if (ctrlArr[i] == nullptr)
-				return;
+				continue;
 
 			ctrlArr[i]->Move(Vector3(Vector3::up) * speed);
 
@@ -240,7 +240,7 @@ void InputListener::KeyActionList()
 		for (i; i < ctrlArr.size(); i++)
 		{
 			if (ctrlArr[i] == nullptr)
-				return;
+				continue;
 
 			ctrlArr[i]->Move(Vector3(Vector3::up) * -speed);
 

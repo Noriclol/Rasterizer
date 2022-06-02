@@ -15,7 +15,7 @@ uniform mat4 Model;
 void main()
 {
 
-	gl_Position =   Projection * ModelView * vec4(position, 1);
+	gl_Position =  ModelView * Projection * vec4(position, 1);
 	Position = (Model * vec4(position, 1)).xyz;
 	Normal = Normal = mat3(transpose(inverse(Model))) * normal.xyz;
 	UV = uv;

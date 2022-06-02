@@ -16,12 +16,10 @@ public:
 
 	Camera() = default;
 	Camera(float near, float far, float fov);
+	Camera(float aspect, float near, float far, float fov);
+
 
 	void LookAt();
 	void LookAt(Vector3 position);
-	//Matrix4 GetView();
-	//void SetView();
-
-	void GetAspectRatio(float Height, float Width);
 
 };

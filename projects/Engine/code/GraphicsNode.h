@@ -39,7 +39,7 @@ public:
 
 
 
-	Transform transform = Transform();
+	Transform transform;
 	Material material = Material();
 
 	//Light

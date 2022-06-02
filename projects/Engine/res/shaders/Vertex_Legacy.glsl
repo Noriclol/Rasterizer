@@ -12,7 +12,7 @@ uniform mat4 mvp;
 
 void main()
 {
-	gl_Position =  mvp * vec4(pos, 1);
-	Color = color;
-	UVs = uv;
+	gl_Position =  mvp * vec4(position, 1);
+	Normal = normal;
+	UV = uv;
 }

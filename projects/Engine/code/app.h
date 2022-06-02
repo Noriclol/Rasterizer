@@ -33,7 +33,7 @@ private:
 	Display::Window* window;
 
 	//Camera
-	Camera cam;
+	Camera* cam;
 
 	//Input
 	InputListener input = InputListener();

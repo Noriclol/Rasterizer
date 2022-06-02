@@ -338,14 +338,65 @@ public:
 		mat[3][3] = 0.0f;
 	}
 
+	void ProjectionPerspecT(float near, float far, float fov)
+	{
+		float S = 1 / (tanf((fov * 0.5f) * DEG2RAD));
 
+		mat[0][0] = S;
+		mat[1][0] = 0.0f;
+		mat[2][0] = 0.0f;
+		mat[3][0] = 0.0f;
+
+		mat[0][1] = 0.0f;
+		mat[1][1] = S;
+		mat[2][1] = 0.0f;
+		mat[3][1] = 0.0f;
+
+		mat[0][2] = 0.0f;
+		mat[1][2] = 0.0f;
+		mat[2][2] = -far / (far - near);
+		mat[3][2] = -far * near / (far - near);
+
+		mat[0][3] = 0.0f;
+		mat[1][3] = 0.0f;
+		mat[2][3] = -1.0f;
+		mat[3][3] = 0.0f;
+	}
 
 	void ProjectionPerspecAspect(float aspect, float near, float far, float fov)
 	{
-		const float t = tanf(fov / 2 * DEG2RAD) * near;
+		const float t = tanf(fov / (2 * DEG2RAD)) * near;
 		const float l = -t * aspect;
 		const float r = t * aspect;
 		const float b = l;
+
+		//const float tanFOV = tan(fov * 0.5f);
+		//const float cotFOVinvA = 1 / (tanFOV * aspect);
+		//const float cotFOV = 1 / (tanFOV);
+
+
+		////mat[0][0] = near / r;
+		//mat[0][0] = cotFOVinvA;
+		//mat[0][1] = 0.0f;
+		//mat[0][2] = 0.0f;
+		//mat[0][3] = 0.0f;
+
+		//mat[1][0] = 0.0f;
+		////mat[1][1] = near / t;
+		//mat[1][1] = cotFOV;
+		//mat[1][2] = 0.0f;
+		//mat[1][3] = 0.0f;
+
+		//mat[2][0] = 0.0f;
+		//mat[2][1] = 0.0f;
+		//mat[2][2] = -(far + near) / (far - near);
+		//mat[2][3] = ( - 2 * far * near) / (far - near);
+
+		//mat[3][0] = 0.0f;
+		//mat[3][1] = 0.0f;
+		//mat[3][2] = -1.0f;
+		//mat[3][3] = 0.0f;
+
 
 		mat[0][0] = 2 * near / (r - l);
 		mat[0][1] = 0.0f;
@@ -359,13 +410,14 @@ public:
 
 		mat[2][0] = 0.0f;
 		mat[2][1] = 0.0f;
-		mat[2][2] = (-far + near) / (far - near);
-		mat[2][3] = -2 * far * near / (far - near);
+		mat[2][2] = -(far + near) / (far - near);
+		mat[2][3] = (-2 * far * near) / (far - near);
 
 		mat[3][0] = 0.0f;
 		mat[3][1] = 0.0f;
 		mat[3][2] = -1.0f;
 		mat[3][3] = 0.0f;
+
 	}
 
 

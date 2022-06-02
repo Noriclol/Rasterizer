@@ -26,9 +26,11 @@ bool Application::Open()
 
 		// INPUT
 
+		input.CameraSpeed = CAM_SPEED;
 		input.SetWindow(window);
 		input.SetWindowSizeRef();
 		input.setMouseInputMode();
+
 		window->SetMousePressFunction([this](int button, int action, int mods) {
 			std::cout << "MousePress Activated" << std::endl;
 			input.MousePress(button, action, mods);
@@ -60,26 +62,38 @@ void Application::Run()
 
 
 	//Models
+	auto scale = 0.001f;
 
-	//auto GN_Ball = new GraphicsNode(CIRCLE_OBJ, SHADER_VERTEX_STANDARD, SHADER_FRAGMENT_COLOR);
-	//auto GN_Box = new GraphicsNode(SHAPE_CUBE, SHADER_VERTEX_LEGACY, SHADER_FRAGMENT_COLOR);
-	auto GN_Cat = new GraphicsNode(CAT_OBJ, SHADER_VERTEX_LEGACY, SHADER_FRAGMENT_COLOR);
+	auto GN_Ball = new GraphicsNode(CIRCLE_OBJ,  CIRCLE_PNG, SHADER_VERTEX_STANDARD, SHADER_FRAGMENT_UNLIT, Vector3::zero, scale);
+	//auto GN_Box = new GraphicsNode(SHAPE_CUBE, CUBE_PNG, SHADER_VERTEX_STANDARD, SHADER_FRAGMENT_COLOR, Vector3::zero, scale);
+	//auto GN_Cat = new GraphicsNode(CAT_OBJ,  SHADER_VERTEX_STANDARD, SHADER_FRAGMENT_UV, Vector3::zero, scale);
 
 
 	//Camera
-	cam = Camera(CAM_NEAR, CAM_FAR, CAM_FOV);
-	cam.LookAt();
-	cam.position = Vector3(0, 0, 3);
+	//float aspect = DISPLAY_WIDTH / DISPLAY_HEIGHT;
+	//cam = new Camera(aspect, CAM_NEAR, CAM_FAR, CAM_FOV);
+	//cam->position =(Vector3(0, 0, -50));
+
+
+	Matrix4 perspecMat;
+	perspecMat.ProjectionPerspec(0.005f, 150.0f, 75.0f);
+	//perspecMat = perspecMat.Transpose();
+
+	Matrix4 viewMat;
+	//viewMat = Matrix4::identity;
 
 
 
-
+	//TRANSPOSE MVP MATRICIES
+	//cam->View = cam->View.Transpose();
+	//cam->Perspective = cam->Perspective.Transpose();
+	//GN_Ball->transform.transform = GN_Ball->transform.transform.Transpose();
 
 
 	//bind Input;
 	//input.BindTransform(&GN_Cat->transform);
 	//input.BindTransform(&GN_Box->transform);
-	//input.BindTransform(&GN_Ball->transform);
+	input.BindTransform(&GN_Ball->transform);
 
 	//SoftwareRenderer Pass Lambda functions
 	//SoftwareRenderer renderer;
@@ -114,10 +128,15 @@ void Application::Run()
 		input.MouseActionList();
 
 
-		//GN_Box->Draw(cam.View, cam.Perspective);
-		GN_Cat->Draw(cam.View, cam.Perspective);
-		//GN_Ball->Draw(cam.View, cam.Perspective);
+		//GN_Box->Draw(cam->View, cam->Perspective);
 
+		//GN_Box->Draw(viewMat, perspecMat);
+
+		//GN_Cat->Draw(cam->View, cam->Perspective);
+		//GN_Ball->Draw(cam->View, cam->Perspective);
+
+		GN_Ball->Draw(viewMat, perspecMat);
+		
 
 		this->window->Update();
 		this->window->SwapBuffers();

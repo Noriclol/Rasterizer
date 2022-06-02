@@ -81,11 +81,13 @@ void InputListener::KeyPress(int key, int scancode, int action, int mods) { // i
 	if (key == GLFW_KEY_2 && action == GLFW_PRESS) 
 	{
 		if (keyButtonActiveArr[7] == 1) {
+			std::cout << "Renderer Set to OpenGL\n";
 			keyButtonActiveArr[7] = 0;
 			//std::cout << keyButtonActiveArr[7];
 		}
 
 		else if (keyButtonActiveArr[7] == 0) {
+			std::cout << "Renderer Set to Custom\n";
 			keyButtonActiveArr[7] = 1;
 			//std::cout << keyButtonActiveArr[7];
 		}
@@ -254,8 +256,6 @@ void InputListener::KeyActionList()
 	//Wireframe
 
 	if (keyButtonActiveArr[6] == 0) {
-		//glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-		
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	}
 	if (keyButtonActiveArr[6] == 1) {
@@ -263,7 +263,12 @@ void InputListener::KeyActionList()
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	}
 	//rasterizer
-
+	if (keyButtonActiveArr[7] == 0) {
+		CPURender = false;
+	}
+	if (keyButtonActiveArr[7] == 1) {
+		CPURender = true;
+	}
 	
 }
 

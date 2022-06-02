@@ -25,7 +25,6 @@ bool Application::Open()
 
 
 		// INPUT
-
 		input.CameraSpeed = CAM_SPEED;
 		input.SetWindow(window);
 		input.SetWindowSizeRef();
@@ -74,13 +73,14 @@ void Application::Run()
 	//cam = new Camera(aspect, CAM_NEAR, CAM_FAR, CAM_FOV);
 	//cam->position =(Vector3(0, 0, -50));
 
+	Vector3 camPosition = Vector3(0, 0, -2);
 
 	Matrix4 perspecMat;
 	perspecMat.ProjectionPerspec(0.005f, 150.0f, 75.0f);
 	//perspecMat = perspecMat.Transpose();
 
 	Matrix4 viewMat;
-	//viewMat = Matrix4::identity;
+	viewMat.LookAt(camPosition, Vector3::zero, Vector3::up);;
 
 
 
@@ -128,14 +128,15 @@ void Application::Run()
 		input.MouseActionList();
 
 
-		//GN_Box->Draw(cam->View, cam->Perspective);
-
-		//GN_Box->Draw(viewMat, perspecMat);
-
-		//GN_Cat->Draw(cam->View, cam->Perspective);
-		//GN_Ball->Draw(cam->View, cam->Perspective);
-
-		GN_Ball->Draw(viewMat, perspecMat);
+		if (input.CPURender)
+		{
+			
+		}
+		else
+		{
+			GN_Ball->Draw(viewMat.Transpose(), perspecMat);
+		}
+		
 		
 
 		this->window->Update();

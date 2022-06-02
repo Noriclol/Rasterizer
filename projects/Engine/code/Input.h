@@ -21,9 +21,11 @@ private:
 	float xOffset, yOffset;
 	float yaw = 0, pitch = 0;
 	float yawBuffer = 0, pitchBuffer = 0;
+
 	int count = 0;
 public:
 	float CameraSpeed = 0;
+	bool CPURender = false;
 
 	bool keyButtonActiveArr[9] =	{	0,0,0,0,0,
 										0,0,0,0

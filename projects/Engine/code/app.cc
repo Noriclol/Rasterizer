@@ -22,7 +22,7 @@ bool Application::Open()
 	{
 		//set size and title
 		this->window->SetSize(DISPLAY_WIDTH, DISPLAY_HEIGHT);
-		this->window->SetTitle(DISPLAY_NAME);
+		this->window->SetTitle(DISPLAY_NAME.data());
 
 
 
@@ -67,7 +67,7 @@ void Application::Run()
 	//MODELS
 	auto scale = 0.001f;
 
-	auto GN_Ball = new GraphicsNode(CIRCLE_OBJ,  CIRCLE_PNG, SHADER_VERTEX_STANDARD, SHADER_FRAGMENT_UNLIT, Vector3::zero, scale);
+	auto GN_Ball = new GraphicsNode(CIRCLE_OBJ.data(),  CIRCLE_PNG.data(), SHADER_VERTEX_STANDARD.data(),SHADER_FRAGMENT_UNLIT.data(), Vector3::zero, scale);
 	//auto GN_Box = new GraphicsNode(SHAPE_CUBE, CUBE_PNG, SHADER_VERTEX_STANDARD, SHADER_FRAGMENT_COLOR, Vector3::zero, scale);
 	//auto GN_Cat = new GraphicsNode(CAT_OBJ,  SHADER_VERTEX_STANDARD, SHADER_FRAGMENT_UV, Vector3::zero, scale);
 
@@ -80,7 +80,7 @@ void Application::Run()
 	//cam = new Camera(aspect, CAM_NEAR, CAM_FAR, CAM_FOV);
 	//cam->position =(Vector3(0, 0, -50));
 
-	Vector3 camPosition = Vector3(0, 0, -2);
+	Vector3 camPosition = Vector3(0, 0, 1);
 
 	Matrix4 perspecMat;
 	perspecMat.ProjectionPerspec(0.005f, 150.0f, 75.0f);
@@ -101,24 +101,25 @@ void Application::Run()
 
 	//RENDERER
 
-	const auto vertexShader = [](Vertex& vertex, Matrix4& model, Matrix4& view, Matrix4& projection) -> Vertex
-	{
-		const Vector3 position = (projection * view * model).Transpose() * vertex.position;
-		return { position, vertex.normal, vertex.uv };
-	};
-
-	const auto fragmentShader = [this]()->Color3
-	{
-		//For now just spit out red
-		return { 1, 0, 0 };
-	};
-
+	//const auto vertexShader = [](Vertex& vertex, Matrix4& model, Matrix4& view, Matrix4& projection) -> Vertex
+	//{
+	//	const Vector3 position = (projection * view * model).Transpose() * vertex.position;
+	//	return { position, vertex.normal, vertex.uv };
+	//};
+	//const auto fragmentShader = [this]()->Color3
+	//{
+	//	//For now just spit out red
+	//	return { 1, 0, 0 };
+	//};
 	//Renderer renderer;
 	//renderer.SetVertexShader(vertexShader);
 	//renderer.SetFragmentShader(fragmentShader);
-
 	//Screen screen = Screen(renderer);
 	//screen.AddRenderableObject(GN_Ball);
+
+	Screen screen = Screen();
+
+
 
 
 
@@ -132,18 +133,21 @@ void Application::Run()
 		input.KeyActionList();
 		input.MouseActionList();
 
+		this->window->Update();
+
 
 		if (input.CPURender)
 		{
-			//screen.Draw(viewMat.Transpose(), perspecMat);
+			glClearColor(0.1f, 1.0f, 0.1f, 1.0f);
+			screen.Draw(viewMat.Transpose(), perspecMat);
 		}
 		else
 		{
+			glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 			GN_Ball->Draw(viewMat.Transpose(), perspecMat);
 		}
 
 
-		this->window->Update();
 		this->window->SwapBuffers();
 		
 	}

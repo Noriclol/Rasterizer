@@ -18,7 +18,7 @@ public:
 	GLuint vertex;
 	GLuint fragment;
 	
-
+	ShaderResource() = default;
 	ShaderResource(std::string psPath, std::string vsPath);
 	~ShaderResource();
 	

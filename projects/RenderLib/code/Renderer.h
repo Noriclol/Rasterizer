@@ -8,15 +8,86 @@
 #include "Vector3.h"
 
 #include "Camera.h"
+
 #include "Transform.h"
 
 #include  "S_Vertex.h"
 #include "S_Pixel.h"
-#include "S_BufferData.h"
 #include "S_Color.h"
 
 
 #include "Resource_Texture.h"
+#include "Resource_Mesh.h"
+
+
+
+
+class RenderableObject
+{
+public:
+	std::shared_ptr<MeshResource> MeshRes;
+	std::shared_ptr<TextureResource> TextureRes;
+	Transform TransformRes;
+
+	RenderableObject(std::shared_ptr<MeshResource> mesh, std::shared_ptr<TextureResource> texture, Transform transform) :
+		MeshRes(move(mesh)), TextureRes(move(texture)){ }
+};
+
+
+/**
+ * Render class is in charge of compiling given 3D data and converting it into a texture that will be used to draw on mesh from Screen class.
+ */
+class Renderer
+{
+public:
+	//RenderTargets
+	std::vector<RenderableObject> targets;
+
+	//FrameBuffer
+	Pixel* framebuffer;
+	float* depthbuffer;
+	float farplane = 15000.0f;
+	float nearplane = 0.0005f;
+	Pixel backgroundColor = Pixel(0.1f, 0.1f, 0.1f);
+
+
+	int width;
+	int height;
+	int size;
+
+
+
+	//Shaders
+	std::function<Vertex(Vertex& vertex, Matrix4 model, Matrix4 view, Matrix4 projection)> vertexShader;
+	std::function<Color3()> fragmentShader;
+
+	Renderer() = default;
+
+	Renderer(int screen_height, int screen_width)
+	{
+		width = screen_width;
+		height = screen_height;
+
+		//size of buffers needed
+		size = width * height;
+
+		framebuffer = new Pixel[size];
+		depthbuffer = new float[size];
+	}
+
+	void Draw(Matrix4 view, Matrix4 projection);
+
+	//Set Shaders
+	void SetVertexShader(const std::function<Vertex(Vertex& vertex, Matrix4 model, Matrix4 view, Matrix4 projection)>& shader) { this->vertexShader = shader; };
+	void SetFragmentShader(const std::function<Color3()>& shader) { this->fragmentShader = shader; };
+
+
+	void AddRenderableObject(RenderableObject& object) { targets.emplace_back(std::move(object)); };
+
+
+
+
+};
 
 
 //Uniforms are fields that need to gets passed to the shader

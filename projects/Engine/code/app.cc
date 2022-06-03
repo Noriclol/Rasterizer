@@ -5,7 +5,9 @@
 #include <fstream>
 #include <sstream>
 
+#include "Renderer.h"
 #include "Resource_Mesh.h"
+#include "Screen.h"
 
 using namespace Display;
 using namespace std;
@@ -60,7 +62,9 @@ void Application::Run()
 	glEnable(GL_DEPTH_TEST);
 
 
-	//Models
+
+
+	//MODELS
 	auto scale = 0.001f;
 
 	auto GN_Ball = new GraphicsNode(CIRCLE_OBJ,  CIRCLE_PNG, SHADER_VERTEX_STANDARD, SHADER_FRAGMENT_UNLIT, Vector3::zero, scale);
@@ -68,7 +72,10 @@ void Application::Run()
 	//auto GN_Cat = new GraphicsNode(CAT_OBJ,  SHADER_VERTEX_STANDARD, SHADER_FRAGMENT_UV, Vector3::zero, scale);
 
 
-	//Camera
+
+
+	//CAMERA
+
 	//float aspect = DISPLAY_WIDTH / DISPLAY_HEIGHT;
 	//cam = new Camera(aspect, CAM_NEAR, CAM_FAR, CAM_FOV);
 	//cam->position =(Vector3(0, 0, -50));
@@ -84,38 +91,36 @@ void Application::Run()
 
 
 
-	//TRANSPOSE MVP MATRICIES
-	//cam->View = cam->View.Transpose();
-	//cam->Perspective = cam->Perspective.Transpose();
-	//GN_Ball->transform.transform = GN_Ball->transform.transform.Transpose();
 
+	//INPUT BINDINGS
 
-	//bind Input;
 	//input.BindTransform(&GN_Cat->transform);
 	//input.BindTransform(&GN_Box->transform);
 	input.BindTransform(&GN_Ball->transform);
 
-	//SoftwareRenderer Pass Lambda functions
-	//SoftwareRenderer renderer;
-	//renderer.frameBuffer.SetFrameBufferSize(1024, 1024);
-	//renderer.SetVertexShader([this](const Uniforms& uniform, const VertexRaw& v, Vector3& position, Vector3& uv, Vector3& normal, Vector3& worldPosition)
-	//{
-	//should use transpose * mvp
-	//	position = *uniform.mvp * v.Position();
-	//	worldPosition = *(uniform.m) * v.Position();
-	//	uv = v.Texture();
-	//	normal = (*(uniform.n) * v.Normal()).normalize();
-	//});
-	//renderer.SetFragmentShader([this](const Uniforms& uniform, const Vector3& position, const Vector3& uv, const Vector3& normal, const Vector3& worldPosition, Color3& outColor)
-	//{
-	//	Vector3 L = (*uniform.lPos - position).normalize();
-	//	Vector3 V = (*uniform.cPos - position).normalize();
-	//	Vector3 H = (L + V).normalize();
-	//	Color3 colorMix = *uniform.dColor + uniform.texture->Sample(uv);
-	//	Color3 D = colorMix * L.DotProduct(normal) * *uniform.lColor;
-	//	Color3 S = *uniform.sColor * powf(normal.DotProduct(H), uniform.shine);
-	//	outColor = *uniform.aColor + D + S;
-	//});
+
+	//RENDERER
+
+	const auto vertexShader = [](Vertex& vertex, Matrix4& model, Matrix4& view, Matrix4& projection) -> Vertex
+	{
+		const Vector3 position = (projection * view * model).Transpose() * vertex.position;
+		return { position, vertex.normal, vertex.uv };
+	};
+
+	const auto fragmentShader = [this]()->Color3
+	{
+		//For now just spit out red
+		return { 1, 0, 0 };
+	};
+
+	//Renderer renderer;
+	//renderer.SetVertexShader(vertexShader);
+	//renderer.SetFragmentShader(fragmentShader);
+
+	//Screen screen = Screen(renderer);
+	//screen.AddRenderableObject(GN_Ball);
+
+
 
 	//running loop
 	while (this->window->IsOpen())
@@ -130,14 +135,13 @@ void Application::Run()
 
 		if (input.CPURender)
 		{
-			
+			//screen.Draw(viewMat.Transpose(), perspecMat);
 		}
 		else
 		{
 			GN_Ball->Draw(viewMat.Transpose(), perspecMat);
 		}
-		
-		
+
 
 		this->window->Update();
 		this->window->SwapBuffers();

@@ -23,7 +23,7 @@ public:
 	unsigned int slot;
 
 
-
+	TextureResource() = default;
 	TextureResource(const std::string& path);
 	~TextureResource();
 

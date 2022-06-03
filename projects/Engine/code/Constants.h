@@ -9,6 +9,7 @@ static float CAM_NEAR = 0.005f;
 static float CAM_FAR = 150000.0f;
 static float CAM_FOV = 90.0f;
 static float CAM_SPEED = 0.03f;
+
 //Cat
 const std::string CAT_OBJ = "meshes/cat.obj";
 const std::string CAT_PNG = "textures/cat.jpg";
@@ -32,3 +33,8 @@ const std::string SHADER_VERTEX_LEGACY = "shaders/Vertex_Legacy.glsl";
 const std::string SHADER_FRAGMENT_UV = "shaders/Frag_UV.glsl";
 const std::string SHADER_FRAGMENT_COLOR = "shaders/Frag_Color.glsl";
 const std::string SHADER_FRAGMENT_UNLIT = "shaders/Frag_Unlit.glsl";
+
+//Rasterizer Shaders
+
+const std::string SHADER_VERTEX_SCREEN = "shaders/Vertex_Screen.glsl";
+const std::string SHADER_FRAGMENT_SCREEN = "shaders/Frag_Screen.glsl";
